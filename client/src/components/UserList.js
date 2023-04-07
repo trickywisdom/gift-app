@@ -6,7 +6,7 @@ function UserList() {
 
     async function getAllUsers() {
         let response = await axios.get(
-          "https://642fc70b2eb8b075fddb3278--magical-praline-2974f5.netlify.app/user/all"
+          "https://gift-app-shxz.onrender.com/user/all"
         );
         setAllusers(response.data);
     }

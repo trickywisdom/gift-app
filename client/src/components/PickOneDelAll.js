@@ -6,7 +6,7 @@ function PickOneDelAll() {
 
     async function getWinner() {
         let response = await axios.delete(
-          "https://642fc70b2eb8b075fddb3278--magical-praline-2974f5.netlify.app/user/pickonedelall"
+          "https://gift-app-shxz.onrender.com/user/pickonedelall"
         );
         if (response.data) {
             setWinner(response.data.name);

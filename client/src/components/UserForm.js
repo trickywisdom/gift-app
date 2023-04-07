@@ -12,10 +12,7 @@ function UserForm() {
             email: email,
         };
         axios
-          .post(
-            "https://642fc70b2eb8b075fddb3278--magical-praline-2974f5.netlify.app/user/create",
-            newUser
-          )
+          .post("https://gift-app-shxz.onrender.com/user/create", newUser)
           .then((res) => alert(res.data.msg));
     }
 

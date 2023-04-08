@@ -13,7 +13,7 @@ function UserList() {
 
     useEffect(() => {
         getAllUsers();
-    }, [allusers]);
+    }, []);
 
     return (
         <div>

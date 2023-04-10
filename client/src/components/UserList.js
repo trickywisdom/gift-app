@@ -5,9 +5,7 @@ function UserList() {
     const [allusers, setAllusers] = useState([]);
 
     async function getAllUsers() {
-        let response = await axios.get(
-          "https://gift-app-shxz.onrender.com/user/all"
-        );
+        let response = await axios.get("http://localhost:8000/user/all");
         setAllusers(response.data);
     }
 
@@ -16,17 +14,19 @@ function UserList() {
     }, []);
 
     return (
-        <div>
-            <h1>PARTICIPANTS</h1>
-            <ol>
-                {allusers.map((user) => {
-                    return (
-                      <div key={user._id}>
-                        <li>{user.name}</li>
-                      </div>
-                    );
-                 })}
-            </ol>
+      <div className="participantscontainer">
+        <h2>PARTICIPANTS</h2>
+        <div className="participants">
+          <ol>
+            {allusers.map((user) => {
+              return (
+                <div key={user._id}>
+                  <li>{user.name}</li>
+                </div>
+              );
+            })}
+          </ol>
+        </div>
       </div>
     );
 }

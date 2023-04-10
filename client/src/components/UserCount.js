@@ -1,23 +1,10 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-
-function UserCount() {
-  const [usercount, setUsercount] = useState(0);
-
-  async function getUserCount() {
-    let response = await axios.get(
-      "https://gift-app-shxz.onrender.com/user/allnum"
-    );
-    setUsercount(response.data.count);
-  }
-
-  useEffect(() => {
-    getUserCount();
-  }, [usercount]);
+function UserCount({ usercount }) {
 
   return (
-    <div>
-      <h1>{usercount}</h1>
+    <div className="countcontainer">
+      <div className="count">
+        <h3>Potential winners: {usercount}</h3>
+      </div>
     </div>
   );
 }

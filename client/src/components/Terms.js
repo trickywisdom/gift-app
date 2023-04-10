@@ -10,7 +10,7 @@ function Terms() {
           <p>
             These terms and conditions outline the rules and regulations for the
             use of Gift App's Website, located at
-            https://magical-praline-2974f5.netlify.app/.
+            https://mvp-gift-app.netlify.app/.
           </p>
 
           <p>

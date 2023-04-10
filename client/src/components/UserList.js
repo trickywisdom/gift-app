@@ -5,7 +5,9 @@ function UserList() {
     const [allusers, setAllusers] = useState([]);
 
     async function getAllUsers() {
-        let response = await axios.get("http://localhost:8000/user/all");
+        let response = await axios.get(
+          "https://gift-app-shxz.onrender.com/user/all"
+        );
         setAllusers(response.data);
     }
 

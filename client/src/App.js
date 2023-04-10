@@ -18,7 +18,7 @@ function App() {
 
   async function getWinner() {
     let response = await axios.delete(
-      "http://localhost:8000/user/pickonedelall"
+      "https://gift-app-shxz.onrender.com/user/pickonedelall"
     );
     if (response.data) {
       setWinner(`This week's winner is:\n${response.data.name}`);
@@ -29,7 +29,9 @@ function App() {
   }
 
   async function getUserCount() {
-    let response = await axios.get("http://localhost:8000/user/allnum");
+    let response = await axios.get(
+      "https://gift-app-shxz.onrender.com/user/allnum"
+    );
     setUsercount(response.data.count);
   }
 

@@ -12,7 +12,7 @@ function UserForm({ setQuery }) {
       email: emailRef.current.value,
     };
     axios
-      .post("https://gift-app-shxz.onrender.com/create", newUser)
+      .post("https://gift-app-shxz.onrender.com/user/create", newUser)
       .then((res) => alert(res.data.msg))
       .then(setQuery(Math.random()))
       .then((nameRef.current.value = ""))
